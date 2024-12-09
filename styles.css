@@ -1,6 +1,10 @@
 body{
-    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
+    padding: 0;
 }
 
 
@@ -30,33 +34,196 @@ h2{
     color:hsl(234, 12%, 34%);
 }
 
-.para{
-    display: flex;
-    align-items: center;
+.para {
+    display: flex; 
+    text-align: center;
     justify-content: center;
-    flex-direction: column;
-    line-height: 20px;
-    color:hsl(229, 6%, 66%);
-    padding-top: 15px;
+    line-height: 24px; 
+    font-size: 14px;
+    color: hsl(229, 6%, 66%);
+    padding-top: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto; 
+    width: 500px;
 }
 
-@media (max-width: 468px){
-    nody{
-        padding:0;
-    }
-    h1,h2{
-        font-size: 21px;
-    }
-    .para{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: row;
-        width:200px;
-    }
-    span{
 
+@media (max-width: 768px) {
+    body{
+        padding-top: 250px;
+        padding-bottom: 250px;
     }
+    .para {
+        max-width: 330px;
+        text-align: center; 
+        line-height: 20px;
+        font-size: 16px;
+        margin: 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    h1, h2 {
+        text-align: center;
+        font-size: 25px; 
+        width: 400px;
+    }
+}
 
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 20px;
+    justify-items: center;
+    align-items: flex-;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color:hsl(234, 12%, 34%);
+
+}
+
+.card-1 {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    height: 25vh;
+    padding: 23px;
+    text-align: left;
+    border-top: 4px solid;
+    position: relative;
+}
+.card-2{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    height: 25vh;
+    padding: 20px;
+    text-align: left;
+    border-top: 4px solid;
+    position: relative;
+}
+.card-3{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    height: 25vh;
+    padding: 20px;
+    text-align: left;
+    border-top: 4px solid;
+    position: relative;
+}
+.card-4{
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 340px;
+    height: 25vh;
+    padding: 20px;
+    text-align: left;
+    border-top: 4px solid;
+    position: relative;
+}
+
+
+.card h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card p {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.card img {
+    width: 40px;
+    margin-top: 15px;
+}
+
+.card-1:nth-child(1) {
+border-color: #00c8c8;
+grid-column: 1;
+grid-row: 2;
+position: relative;
+top: 60%;
+transform: translateX(-2%);
+}
+
+.card-2:nth-child(2) {
+border-color: #ff5a5a;
+grid-column: 2;
+grid-row: 2;
+}
+
+.card-3:nth-child(3) {
+border-color: #4b9eff;
+grid-column: 3;
+grid-row: 2;
+position: relative;
+top: 60%;
+transform: translateX(2%);
+}
+
+.card-4:nth-child(4) {
+border-color: #ffc107;
+grid-column: 2;
+grid-row: 3;
+}
+
+.cards-para{
+    font-size: 15px;
+    color: hsl(229, 6%, 66%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+svg {
+    position: absolute;
+    bottom: 12%;
+    left: 75%;
+}
+
+
+@media (max-width: 768px) {
+.cards {
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+gap: 20px;
+}
+
+.card-1:nth-child(1),
+.card-2:nth-child(2),
+.card-3:nth-child(3),
+.card-4:nth-child(4) {
+grid-column: 1 !important;
+grid-row: auto;
+transform: none;
+top: 0;
+margin: 0 auto;
+}
+}
+
+@media (max-width: 480px) {
+.card-1:nth-child(1),
+.card-2:nth-child(2),
+.card-3:nth-child(3),
+.card-4:nth-child(4) {
+width: 80%; 
+padding: 15px;
+}
+
+.cards {
+gap: 15px; 
+}
 
 }
